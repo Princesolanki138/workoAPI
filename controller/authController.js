@@ -39,7 +39,7 @@ export const loginUser = async (req, res) => {
     res.status(200).send({
       success: true,
       message: "user login successfully",
-      userDto: new userDto(userr.email, null),
+      userDto: new userDto(userr),
       token
     });
 
@@ -73,7 +73,7 @@ export const updateUser = async (req, res) => {
   } catch (error) {
 
     res.status(500).send(error);
-    console.log("error in update user controller ")
+    console.log("error in update user controller ", error)
 
   }
 }

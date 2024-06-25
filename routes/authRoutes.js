@@ -15,6 +15,7 @@ router.post('/userSignup', loginUser)
 
 //update user 
 router.put('/updateUser/:id', authorization, updateUser)
+router.patch('/updateUser/:id', authorization, updateUser)
 
 //get user by id 
 router.get("/getuser/:id", authorization, getUserById)
